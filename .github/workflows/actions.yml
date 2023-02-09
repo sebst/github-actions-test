@@ -1,11 +1,11 @@
 name: run main.py
 
 on:
-  push:
-    branches:
-      - main
-  # schedule:
-  #   - cron: '*/10 * * * *' # At every 10th minute
+  # push:
+  #   branches:
+  #     - main
+  schedule:
+    - cron: '*/10 * * * *' # At every 10th minute
 
 jobs:
   build:
