@@ -22,8 +22,8 @@ if __name__ == "__main__":
     entries = feed_parser.entries[:3]
     
     with open("README.md", "w") as f:
-        f.write("# Latest Blog Posts")
+        f.write("# Latest Blog Posts\n")
         for entry in entries:
             logger.info(f"processing entry {entry.title}")
-            f.write(f"- [{entry.title}]({entry.link})")
+            f.write(f"- [{entry.title}]({entry.link})\n")
     
