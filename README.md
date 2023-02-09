@@ -1,1 +1,1 @@
-TBD
+Latest item: {entries[0]}
