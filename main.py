@@ -25,5 +25,5 @@ if __name__ == "__main__":
         logger.info(f"processing entry {entry.title}")
     
     with open("README.md", "w") as f:
-        f.write("Latest item: {entries[0]}")
+        f.write(f"Latest item: {entries[0]}")
     
