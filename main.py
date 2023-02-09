@@ -20,10 +20,9 @@ if __name__ == "__main__":
     feed = 'https://bas.codes/rss.xml'
     feed_parser = feedparser.parse(feed)
     entries = feed_parser.entries[:3]
-
-    for entry in entries:
-        logger.info(f"processing entry {entry.title}")
     
     with open("README.md", "w") as f:
-        f.write(f"Latest item: [{entries[0].title}]({entries[0].link})")
+        for entry in entries:
+            logger.info(f"processing entry {entry.title}")
+            f.write(f"Latest item: [{entry.title}]({entry.link})")
     
